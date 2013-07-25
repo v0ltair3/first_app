@@ -4,6 +4,5 @@ class Device < ActiveRecord::Base
   belongs_to :user  
   
   validates :description, :length => { :maximum => 100 }
-  
 
 end
