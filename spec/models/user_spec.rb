@@ -9,14 +9,14 @@
 #  updated_at :datetime         not null
 #
 
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+require 'spec_helper'
 
-one:
-  firstName: MyString
-  lastName: MyString
-  email: MyString
+describe User do
 
-two:
-  firstName: MyString
-  lastName: MyString
-  email: MyString
+  before { @user = User.new(name: "Example User", email: "user@example.com") }
+
+  subject { @user }
+
+  it { should respond_to(:name) }
+  it { should respond_to(:email) }
+end
