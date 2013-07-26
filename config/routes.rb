@@ -1,6 +1,5 @@
 FirstApp::Application.routes.draw do
-  get "users/new"
-
+  resources :users
 
   root to: 'static_pages#home'
 
@@ -15,7 +14,8 @@ FirstApp::Application.routes.draw do
   resources :devices
 
 
-  resources :users
+
+
 
 
   # The priority is based upon order of creation:
