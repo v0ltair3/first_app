@@ -6,15 +6,16 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-
-   def create
+ 
+ def create
     @user = User.new(params[:user])
+    flash[:success] = "Welcome to the Sample App!"
     if @user.save
-      flash[:success] = "Welcome to Skaut!"
       redirect_to @user
     else
       render 'new'
     end
   end
+
 
 end
